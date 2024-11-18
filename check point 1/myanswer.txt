@@ -1,0 +1,22 @@
+What is web development, and why is it essential in the context of the internet?
+
+    I believe Web Development is the creation or modification of webpages. The internet is a global village where people express their creativity and their point of views, but this can only be possible if there are platforms where these views can be expressed. Web Development helps create these platforms for expression.
+
+Have you heard of HTML? If yes, what does HTML stand for, and what is its primary purpose in web development?
+
+    Yes, stands for HyperText Markup Language, it’s a programming language used to provide structure to a website.
+
+Are you familiar with CSS? If yes, briefly explain what CSS is used for in web development.
+    No, I'm not familiar with CSS, but I know it’s a language used to style websites.
+
+Have you heard of JavaScript? If yes, what is JavaScript, and why is it crucial for building interactive websites?
+
+    Yes, JavaScript is a high level machine language used to create interactive effects on a website. JS is crucial for building interactive websites because it makes static HTML pages become interactive, retrieve data and produce actions instantly which are an essential part in modern web development.
+
+Are you familiar with React and Node.js? If yes, provide a brief description of what React and Node.js are commonly used for in web development.
+
+    No I’m not, although I did a little research on ChatGPT, it explains React as ”a JavaScript library developed by Facebook for building user interfaces (UIs), particularly for single-page applications (SPAs)”, while Node.js is “a JavaScript runtime environment built on Chrome's V8 JavaScript engine that allows developers to run JavaScript code on the server-side (outside the browser).”
+
+Why do you want to learn web development, and what do you hope to achieve by acquiring skills in HTML, CSS, JavaScript, React, and Node.js?
+
+    In a Country like Nigeria, there aren’t many options for young people to explore, but with the right skillset I can position myself for opportunities when they are available. Web development is a field I’m looking to make an impact in. The skills of HTML, CSS, JS,  and Node.js will ensure I’m a high performance Engineer.
