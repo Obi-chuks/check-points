@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obi's Travel Agency</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            background: url('../checkpoint-Bootstrap/assets/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand_335224-1085.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                margin-left: 5%;
+                font-weight: bolder;
+            }
+          
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+           
+            z-index: 10;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 1rem;
+        }
+        .dropdown-menu {
+            min-width: auto;
+        }
+        .dropdown-toggle {
+            color: white;
+            border: 1px solid white;
+        }
+        .dropdown-toggle:hover {
+            background: white;
+            color: black;
+        }
+        .social-icons {
+            position: absolute;
+            right: 20px;
+            bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .logo{
+            img{
+                width:100px;
+            }
+        }
+        .card{background-image: url(/checkpoint-Bootstrap/assets/ice-bergs-jokulsarlon-glacial-lake-iceland.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .africa{background-image: url(/checkpoint-Bootstrap/assets/field-covered-greenery-surrounded-by-zebras-sunlight-blue-sky.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .japan{background-image: url(/checkpoint-Bootstrap/assets/arashiyama-autumn-season-along-river-kyoto-japan_335224-228.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .italy{background-image: url(/checkpoint-Bootstrap/assets/Colosseum-Rome-Italy.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .maldives{background-image: url(/checkpoint-Bootstrap/assets/maldives-island.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .bali{background-image: url(/checkpoint-Bootstrap/assets/aerial-view-phang-nga-bay-with-mountains-sunrise-thailand_335224-1188.jpg);
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 50px;
+        }
+        .card-text{
+            background-color:#00000099;
+            padding:20px;
+            border-radius: 50px;
+        }
+        .card-text:hover{
+            background-color: rgba(255, 255, 255, 0.316);
+            color: black;
+            
+        }
+        .image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+    .image-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 20px;
+    }
+
+    .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+    .text{
+        text-decoration: none;
+    }
+
+    /* Center the footer content */
+.footer {
+    min-height: 100vh; /* Make footer occupy the full height of the viewport */
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #f8f9fa; /* Optional: Add a background color */
+    color: white;
+
+}
+/* Container Styling */
+.custom-input-container {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    align-items: center; /* Vertically align input and button */
+    border: 1px solid #ccc; /* Border around the entire container */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Ensures content stays within the container */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Optional: Limit the max width */
+    margin: 10px auto; /* Center the container */
+
+}
+
+/* Input Styling */
+.custom-input {
+    flex: 1; /* Allow input to take up available space */
+    border: none; /* Remove input border */
+    padding: 10px; /* Add padding */
+    outline: none; /* Remove focus outline */
+    font-size: 16px; /* Larger text size */
+   
+}
+
+/* Button Styling */
+.custom-btn {
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Match input text size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.custom-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="home">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand logo" href="#"><img src="../checkpoint-Bootstrap/assets/travel-logo.png" alt=""></a>
+            <!-- Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destination">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#travel-packages">Travel Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Language Dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Spanish</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid hero-section" >
+        <h1 class="display-1 align-item-start " style="color: crimson;">Weaving Your Dreams</h1>
+        <h1 class="display-1 align-item-start">into Unforgettable<br>Adventures</h1>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+        <!-- booking now -->
+         <div style="margin-left: 10%;">
+            <button class="btn btn-outline-light rounded-5 py-2 px-3" style="margin-right: 30%;">Booking Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+              </svg></button>
+         </div>
+    </div>
+    <!-- about us section -->
+<section id="">
+    <!-- about us col-1 -->
+    <div class="container-fluid row py-5">
+    <div class="col-3 text-secondary text-center">
+    <h4>[About Us]</h4>
+    </div>
+    <!-- about us col-2 -->
+    <div class="col-9">
+    <h1 class="display-5 pb-5" style="font-weight: 600;font-family: 'Courgette'; background: linear-gradient(180deg, #242424, #798087);-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent">"It all began with a single journey ; a trip to the land of fire and ice that sparked a profound love for travelling.<br> Enchanted by natures beauty and rich culture, we knew we had found something truly special."</h1>
+    <!-- statistics -->
+    <div class="row justify-content-center" style="font-family: 'Bayon';font-size: 22px">
+    <h1 class="col-3">95%</h1>  <h1 class="col-3">72+</h1>  <h1 class="col-3">250+</h1>
+    
+    </div>
+    <!--statistics text -->
+    <div class="row justify-content-center">
+        <p class="col-3">Customer Satisfaction</p>
+        <p class="col-3">Popular Destinations</p>
+        <p class="col-4">Experienced Guide</p>
+    </div>
+    </div>
+</section>
+<!-- card section -->
+     <div class="container justify-content-center" >
+        <div class="row">
+        <div class="col-6">
+    <p>[Destination]</p>
+    <h1 class="display-5 " style="font-weight: 700;">A unique blend of adventure, culture, and natural wonders</h1>
+        </div>
+        <div class="col-6 align-self-center">
+    <p>Discover a fusion of adventure, culture, and scenic beauty across our diverse destinations, offering unforgettable experience at every turn</p>
+        </div>
+    </div>
+    </div>
+
+ <section class="container d-flex flex-wrap justify-content-center py-5 mb-5"  id="destination" style="border: 1px solid rgb(164, 161, 161);">
+    <div class="card mx-3 my-3">
+        <div class="card-text">
+    <h4>Brono Tenger Tour</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, veniam aliquid voluptatum, distinctio repellat maxime sed assumenda quos temporibus natus modi? Ea minus magni dolor consequuntur beatae molestiae voluptatum iusto!</p>
+        </div>
+    </div>
+    <div class="card italy mx-3 my-3">
+        <div class="card-text">
+    <h4>Italy Tour</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero blanditiis nobis doloribus voluptate, esse quia, amet temporibus saepe cupiditate tempora natus officiis inventore minima aliquam dolorem quasi pariatur odio aut?</p>
+        </div>
+    </div>
+    <div class="card japan mx-3 my-3">
+        <div class="card-text">
+    <h4>Japan Tour</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam incidunt ratione aut enim consectetur maxime assumenda, magni ducimus modi quaerat illo at autem voluptates neque rem, velit voluptatem, in eaque!</p>
+        </div>
+    </div>
+    <div class="card africa mx-3 my-3">
+        <div class="card-text">
+    <h4>Africa Tour</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, veniam aliquid voluptatum, distinctio repellat maxime sed assumenda quos temporibus natus modi? Ea minus magni dolor consequuntur beatae molestiae voluptatum iusto!</p>
+        </div>
+    </div>
+    <div class="card maldives mx-3 my-3">
+        <div class="card-text">
+    <h4>Maldives Tour</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, veniam aliquid voluptatum, distinctio repellat maxime sed assumenda quos temporibus natus modi? Ea minus magni dolor consequuntur beatae molestiae voluptatum iusto!</p>
+        </div>
+    </div>
+    <div class="card bali mx-3 my-3">
+        <div class="card-text">
+    <h4>Bali Tour</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, veniam aliquid voluptatum, distinctio repellat maxime sed assumenda quos temporibus natus modi? Ea minus magni dolor consequuntur beatae molestiae voluptatum iusto!</p>
+        </div>
+    </div>
+    
+ </section>
+
+ <!-- services section -->
+        <div class="container my-5" id="services">
+          <div class="row align-items-center">
+              <!-- Left Section: Image and Overlay -->
+              <div class="col-md-6 position-relative">
+                  <div class="image-container">
+                      <img src="../checkpoint-Bootstrap/assets/dark-img.jpg" alt="Travel Image" class="img-fluid rounded">
+                      <div class="overlay text-white d-flex flex-column justify-content-end p-4">
+                         
+                          <div class="search-bar bg-secondary rounded-5 p-2 shadow">
+                              <div class="row gx-2">
+                                  <div class="col">
+                                      <input type="date" class="form-control" placeholder="Date">
+                                  </div>
+                                  <div class="col">
+                                      <input type="number" class="form-control" placeholder="Budget">
+                                  </div>
+                                  <div class="col">
+                                      <input type="number" class="form-control" placeholder="Guests">
+                                  </div>
+                                  <div class="col-auto">
+                                      <button class="btn btn-primary">Search</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <p class="mt-4">
+                            Embark on a journey to find your dream destination, where adventure and relaxation await, 
+                            creating unforgettable memories along the way.
+                        </p>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Right Section: Steps -->
+              <div class="col-md-6">
+                  <h2 class="fw-bold">One click for you</h2>
+                  <ul class="list-unstyled mt-4">
+                      <li class="mb-4 d-flex">
+                          <div class="icon me-3">
+                              <span class="badge bg-primary p-3 rounded-circle">
+                                  <i class="bi bi-compass"></i>
+                              </span>
+                          </div>
+                          <div>
+                              <h5 class="fw-semibold">Find your destination</h5>
+                              <p class="text-muted">
+                                  Embark on a journey to discover your dream destination, where adventure and relaxation await.
+                              </p>
+                          </div>
+                      </li>
+                      <li class="mb-4 d-flex">
+                          <div class="icon me-3">
+                              <span class="badge bg-primary p-3 rounded-circle">
+                                  <i class="bi bi-ticket-perforated"></i>
+                              </span>
+                          </div>
+                          <div>
+                              <h5 class="fw-semibold">Book a ticket</h5>
+                              <p class="text-muted">
+                                  Ensure a smooth travel experience by booking tickets to your preferred destination via our platform.
+                              </p>
+                          </div>
+                      </li>
+                      <li class="mb-4 d-flex">
+                          <div class="icon me-3">
+                              <span class="badge bg-primary p-3 rounded-circle">
+                                  <i class="bi bi-credit-card"></i>
+                              </span>
+                          </div>
+                          <div>
+                              <h5 class="fw-semibold">Make payment</h5>
+                              <p class="text-muted">
+                                  We offer various payment options to ensure a hassle-free transaction process.
+                              </p>
+                          </div>
+                      </li>
+                      <li class="d-flex">
+                          <div class="icon me-3">
+                              <span class="badge bg-primary p-3 rounded-circle">
+                                  <i class="bi bi-map"></i>
+                              </span>
+                          </div>
+                          <div>
+                              <h5 class="fw-semibold">Explore destination</h5>
+                              <p class="text-muted">
+                                  Immerse yourself in a captivating tapestry of sights, sounds, and tastes as you explore the streets.
+                              </p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <!-- footer section -->
+  
+<footer class="container-fluid bg-dark" style="color: white; padding-top: 100px; padding-bottom: 100px;" id="contact">
+    <div class="row align-items-center">
+        <div class=" col">
+            <div class="row" style="color: white; padding-left: 20px;">
+            <h5>About</h5>
+            <a href="" class="text-secondary" style="text-decoration: none;">About us</a>
+            <a href="" class="text-secondary"style="text-decoration: none;">Blog</a>
+            <a href="" class="text-secondary"style="text-decoration: none;">Career</a>
+            <a href="" class="text-secondary"style="text-decoration: none;">Jobs</a>
+            <a href="" class="text-secondary"style="text-decoration: none;">In press</a>
+            <a href="" class="text-secondary"style="text-decoration: none;">Gallery</a>
+        </div>
+        </div>
+        <div class="col">
+            <div class="row text " >
+            <h5>Support</h5>
+            <a href="" class="text-secondary" style="text-decoration: none;">Contact Us</a>
+            <a href="" class="text-secondary" style="text-decoration: none;">Online chat</a>
+            <a href="" class="text-secondary" style="text-decoration: none;">WhatsApp</a>
+            <a href="" class="text-secondary" style="text-decoration: none;">Telegram</a>
+            <a href="" class="text-secondary" style="text-decoration: none;">Ticketing</a>
+            <a href="" class="text-secondary" style="text-decoration: none;">Call Center</a>
+        </div>
+        </div>
+        <div class="col"> 
+            <div class="row text">
+            <h5>FAQ</h5>
+            <a href=""  class="text-secondary"style="text-decoration: none;">Acoounts</a>
+            <a href=""  class="text-secondary"style="text-decoration: none;">Bookings</a>
+            <a href=""  class="text-secondary"style="text-decoration: none;">WhatsApp</a>
+            <a href=""  class="text-secondary"style="text-decoration: none;">Telegram</a>
+            <a href=""  class="text-secondary"style="text-decoration: none;">Ticketing</a>
+            <a href=""  class="text-secondary"style="text-decoration: none;">Call Center</a>
+        </div>
+    </div>
+    <div class="col-6" > 
+        <div class="row text container w-75 justify-content-center">
+        <h5>Newsletter</h5>
+        <p class="text-secondary">Don't miss out on the exciting world of travel-Subscribe now and embark on a journey to of discovery with us.</p>
+        <div class="custom-input-container rounded-5">
+        <input type="text" placeholder="Enter your name" class="custom-input" id=""><button class="rounded-5 bg-secondary text-white p-1 px-3" style="border:none"> Submit</button>
+    </div>
+    </div>
+</div>
+        
+    </div>
+</footer>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
