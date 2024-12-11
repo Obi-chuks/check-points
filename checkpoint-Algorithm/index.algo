@@ -1,0 +1,41 @@
+ALGORITHM AnalyzeSentence
+    DECLARE lengthCounter, wordCounter, vowelCounter AS INTEGER
+    DECLARE isWord AS BOOLEAN
+    DECLARE char AS CHARACTER
+
+    SET lengthCounter TO 0
+    SET wordCounter TO 0
+    SET vowelCounter TO 0
+    SET isWord TO FALSE
+
+    OUTPUT "Enter a sentence ending with a period:"
+
+    REPEAT
+        READ char
+        IF char <> '.' THEN
+            SET lengthCounter TO lengthCounter + 1
+
+            IF char = 'a' OR char = 'e' OR char = 'i' OR char = 'o' OR char = 'u' OR 
+               char = 'A' OR char = 'E' OR char = 'I' OR char = 'O' OR char = 'U' THEN
+                SET vowelCounter TO vowelCounter + 1
+            END IF
+
+            IF char = ' ' THEN
+                IF isWord = TRUE THEN
+                    SET wordCounter TO wordCounter + 1
+                    SET isWord TO FALSE
+                END IF
+            ELSE
+                SET isWord TO TRUE
+            END IF
+        END IF
+    UNTIL char = '.'
+
+    IF isWord = TRUE THEN
+        SET wordCounter TO wordCounter + 1
+    END IF
+
+    OUTPUT "Length of the sentence: ", lengthCounter
+    OUTPUT "Number of words: ", wordCounter
+    OUTPUT "Number of vowels: ", vowelCounter
+END ALGORITHM
