@@ -1,0 +1,14 @@
+.container{
+    
+   text-align: center;
+    margin-top: 300px;
+}
+#color-box{
+    width: auto;
+    height: 500px;
+    background-color: aqua;
+}
+#change-color-btn{
+    margin-top: 20px;
+    padding: 10px;
+}
