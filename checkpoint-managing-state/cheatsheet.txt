@@ -1,0 +1,38 @@
+Managing State in React
+
+10/10
+
+Deciding How to Handle State:
+Understand different types of state and their significance in application development.
+Consider factors like data complexity, scalability, and performance when choosing state management approaches.
+Managing Local State and Remote State:
+Distinguish between local state (client-side) and remote state (server-side).
+Learn techniques for managing local state within components using useState hook or component state.
+Explore methods for handling remote state, such as fetching data from APIs and updating UI based on server responses.
+Managing URL State and Web Storage:
+Understand the importance of URL parameters in managing application state.
+Learn how to manipulate URL parameters to reflect application state changes.
+Explore browser storage options like localStorage and sessionStorage for persisting state across sessions.
+Managing Shared, Derived, and Immutable State:
+Identify scenarios where state needs to be shared between multiple components.
+Learn techniques for deriving new state from existing state without mutating the original data.
+Understand the benefits of immutability in state management and how to achieve it using techniques like spread syntax or libraries like Immer.
+Managing Form State and Validation:
+Learn strategies for managing form state and handling user input.
+Implement form validation techniques to ensure data integrity and user experience.
+Explore libraries and frameworks that provide form state management and validation capabilities.
+Managing State via Refs:
+Understand the useRef hook and its role in managing stateful values that persist across renders.
+Learn how to use refs for accessing DOM elements directly and managing focus or scroll position.
+Managing Complex State with useReducer:
+Explore the useReducer hook as an alternative to useState for managing complex state logic.
+Understand the principles of reducers and actions in state management.
+Learn how to organize state logic into reducers and dispatch actions to update state.
+Sharing State and Functions via Context:
+Understand the Context API as a mechanism for sharing state and functions across components.
+Learn how to create and consume context providers and consumers.
+Explore best practices for using context effectively in large-scale applications.
+Managing State via Third-party Libraries:
+Explore popular state management libraries like Redux, MobX, or Recoil.
+Understand the core concepts and principles behind each library.
+Evaluate the suitability of third-party libraries based on project requirements, complexity, and developer preferences.
